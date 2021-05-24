@@ -84,11 +84,11 @@ def make_base(x):
 
 # Find most frequent/common words
 def get_commonwords(x, n=20):
-	return utils._get_ccmmonwords(x, n=20)
+	return utils._get_commonwords(x, n)
 
 # Find least freqent/rare words
 def get_rarewords(x, n=20):
-	utils._get_rarewords(x, n=20)
+	utils._get_rarewords(x, n)
 
 # Remove common/rare words
 def remove_common_rare_words(x, fn):

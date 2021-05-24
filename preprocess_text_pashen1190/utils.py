@@ -27,7 +27,7 @@ def _get_charcount(x):
 
 # Average word length
 def _get_avg_wordlength(x):
-	count = _get_charcounts(x)/_get_wordcounts(x)
+	count = _get_charcount(x)/_get_wordcount(x)
 	return count
 
 # Stopwords count
@@ -159,7 +159,7 @@ def _get_emails(x):
 	emails = re.findall(r'([a-z0-9+._-]+@[a-z0-9+._-]+\.[a-z0-9+_-]+)', x)
 	count = len(emails)
 
-	return counts, emails
+	return count, emails
 
 # Remove email
 def _remove_emails(x):
@@ -204,7 +204,7 @@ def _remove_accentedchars(x):
 
 # Remove stopwords
 def _remove_stopwords(x):
-	return ' '.join([t for t in x.split if t not in stopwords])
+	return ' '.join([t for t in x.split() if t not in stopwords])
 
 # Make to base form
 def _make_base(x):

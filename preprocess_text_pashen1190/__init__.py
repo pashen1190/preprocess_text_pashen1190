@@ -1,6 +1,6 @@
 from preprocess_text_pashen1190 import utils
 
-__version__ = '0.0.1'
+__version__ = '0.0.4'
 
 # Word count
 def get_wordcount(x):
@@ -35,7 +35,7 @@ def get_uppercasecount(x):
 	return utils._get_uppercasecount(x)
 
 # Contraction Expansion 
-def _cont_exp(x):
+def cont_exp(x):
 	return utils._cont_exp(x)
 
 # Emails and its count

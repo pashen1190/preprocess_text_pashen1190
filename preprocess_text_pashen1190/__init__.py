@@ -35,8 +35,8 @@ def get_uppercasecount(x):
 	return utils._get_uppercasecount(x)
 
 # Contraction Expansion 
-def get_cont_exp(x):
-	return utils._get_cont_exp(x)
+def _cont_exp(x):
+	return utils._cont_exp(x)
 
 # Emails and its count
 
@@ -58,6 +58,7 @@ def remove_urls(x):
 # Retweets and count
 def get_retweets(x):
 	return utils._get_retweets(x)
+
 # Remove retweets
 def remove_rt(x):
 	return utils._remove_rt(x)
@@ -72,7 +73,7 @@ def remove_HTMLtags(x):
 
 # Remove Accented Characters
 def remove_accentedchars(x):
-	return utils._remove_accentedchars
+	return utils._remove_accentedchars(x)
 
 # Remove stopwords
 def remove_stopwords(x):
@@ -82,17 +83,17 @@ def remove_stopwords(x):
 def make_base(x):
 	return utils._make_base(x)
 
-# Find most frequent/common words
-def get_commonwords(x, n=20):
-	return utils._get_commonwords(x, n)
+# Value counts
+def get_value_counts(df, col):
+	return utils._get_value_counts(df, col)
 
-# Find least freqent/rare words
-def get_rarewords(x, n=20):
-	utils._get_rarewords(x, n)
+# Remove frequent/common words
+def remove_commonwords(x, freq, n=20):
+	return utils._remove_commonwords(x, freq, n)
 
-# Remove common/rare words
-def remove_common_rare_words(x, fn):
-	return utils._remove_common_rare_words(x, fn)
+# Remove rare words
+def remove_rarewords(x, freq, n=20):
+	return utils._remove_rarewords(x, freq, n)
 
 # Spell correction
 def spelling_correction(x):
